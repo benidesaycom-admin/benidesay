@@ -34,7 +34,8 @@
       position: relative;
       overflow-x: hidden;
     }
-    /* Hafif yıldız efekti – ekstra dosya yok, sadece CSS */
+
+    /* ⭐ Hafif yıldız efekti – ekstra dosya YOK */
     body::before {
       content: "";
       position: fixed;
@@ -152,16 +153,20 @@
       color: var(--muted);
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       text-align: center;
+      line-height: 1.4;
     }
 
     .dot-live {
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       border-radius: 999px;
       background: var(--accent1);
       box-shadow: 0 0 10px rgba(52,211,153,0.9);
+      flex-shrink: 0;
+      position: relative;
+      top: 1px; /* hafif hizalama düzeltmesi */
     }
 
     /* MAIN */
@@ -305,7 +310,7 @@
       gap: 40px;
     }
 
-    /* 2. kutu ters yerleşim */
+    /* 2. kutu ters yerleşim için */
     .info-block.reverse {
       flex-direction: row-reverse;
     }
@@ -426,11 +431,11 @@
         <span>Canlı topluluk sayacı</span>
       </div>
       <h1 class="hero-title">
-        Sokakta yaşayan hayvanlar için <br><span class="accent">insani çözümler</span> isteyenlerin sayacı.</br>
+        Sokakta yaşayan hayvanlar için <span class="accent">insani çözümler</span> isteyenlerin sayacı.
       </h1>
       <p class="hero-subtitle">
-        <strong>Yakala–kısırlaştır–yerine bırak</strong>, şeffaf, <strong>kameralar ile gözlemlenebilen</strong> barınaklar ve <strong>yaşatma odaklı çözümler</strong> tarafındaysan;
-        <br>adını bu sayaca ekleyerek politika değil <strong>merhamet</strong> tarafını seçmiş oluyorsun.</br>
+        Yakala–kısırlaştır–yerine bırak, şeffaf barınaklar ve <strong>yaşatma odaklı çözümler</strong> tarafındaysan;
+        adını bu sayaca ekleyerek politika değil <strong>merhamet</strong> tarafını seçmiş oluyorsun.
       </p>
     </header>
 
@@ -606,8 +611,11 @@
           </div>
         </div>
 
-        <!-- 2 (REVERSE) -->
+        <!-- 2 – GERÇEKTEN REVERSE: container reverse + çocuklar image, text -->
         <div class="info-block reverse">
+          <div class="info-image">
+            <img src="block2image.png" alt="Kalabalık destekçi illüstrasyonu">
+          </div>
           <div class="info-text">
             <h3>Bu sayaç neye yarayacak?</h3>
             <p>
@@ -620,9 +628,6 @@
               Sayımız büyüdükçe; belediyelere, karar vericilere ve birbirimize şunu söyleyebiliriz:
               <strong>“Biz buradayız ve yaşatma odaklı çözümler istiyoruz.”</strong>
             </p>
-          </div>
-          <div class="info-image">
-            <img src="block2image.png" alt="Kalabalık destekçi illüstrasyonu">
           </div>
         </div>
 
