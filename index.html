@@ -259,23 +259,26 @@
     .info-block.reverse { flex-direction: row-reverse; }
 
    /* 🔧 GÖRSELLERİN HER ZAMAN TAM GÖRÜNMESİ — ZERO CROP */
+/* BLOK GÖRSELLERİ – TAM GÖRSEL, YUVARLAK VE KIRPMA YOK */
 .info-image {
   flex: 0 0 45%;
   border-radius: 24px;
   border: 1px solid rgba(148,163,184,0.25);
   box-shadow: 0 18px 40px rgba(0,0,0,0.6);
-  overflow: visible;            /* 🔥 artık kesme yok */
-  background: transparent;
-  height: auto;                 /* 🔥 sabit yükseklik yok */
+  background: rgba(15,23,42,0.98);
+  padding: 12px;          /* içerden boşluk – poster gibi dursun */
+  overflow: hidden;       /* kenarlar yumuşak kalsın */
+  height: auto;           /* SABİT YÜKSEKLİK YOK = kırpma yok */
 }
 
 .info-image img {
-  width: 100%;                  /* container genişliğine oturur */
-  height: auto;                 /* 🔥 oranı korur */
-  object-fit: contain;          /* 🔥 kırpmaz */
+  width: 100%;
+  height: auto;           /* oran bozulmadan küçülür */
   display: block;
-  max-width: 100%;
+  object-fit: contain;    /* ekstra güvence – ama kırpma yapmaz */
+  border-radius: 16px;    /* görselin köşeleri de yumuşak */
 }
+
 
     .info-text {
       flex: 1;
